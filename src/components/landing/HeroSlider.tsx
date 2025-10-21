@@ -135,7 +135,7 @@ const HeroSlider = () => {
         </button>
 
         {/* “1 / 3” 카운터*/}
-        <div className="select-none font-serif text-lg">
+        <div className="select-none font-serif text-xl font-bold">
           <span className="text-white">{selectedIndex + 1}</span>
           <span className="mx-2 text-[#911A00]">/</span>
           <span className="text-[#911A00]">{total}</span>

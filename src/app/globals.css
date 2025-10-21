@@ -19,6 +19,27 @@
   }
 }
 
+/* 전역: marquee 유틸 */
+@keyframes marquee-x {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  width: max-content; /* 내용 길이만큼 */
+  animation: marquee-x var(--marquee-duration, 25s) linear infinite;
+}
+.marquee:hover .marquee-track {
+  /* 호버 시 일시정지 */
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
