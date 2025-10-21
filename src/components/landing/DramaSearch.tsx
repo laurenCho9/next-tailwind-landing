@@ -44,7 +44,6 @@ const DramaSearch = () => {
             text-[#911A00] text-[20px] font-bold
             "
           />
-
           <button
             onClick={onSearch}
             aria-label="Next slide"
@@ -59,9 +58,10 @@ const DramaSearch = () => {
           </button>
         </div>
       </article>
+
       {/* 결과 레일 */}
       <article className="mx-auto w-full max-w-[1440px] pb-[72px]">
-        <div className="mt-8">
+        <div>
           {loading ? (
             <p className="text-neutral-500">불러오는 중…</p>
           ) : data.length === 0 ? (
