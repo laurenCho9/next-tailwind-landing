@@ -51,17 +51,29 @@ const MemoRail = ({ items }: { items: TMemo[] }) => {
                   </span>
                 </header>
 
-                <main className="flex-1">
-                  <h3 className="mb-2 text-lg font-semibold text-[#B8442F]">
-                    {m.play_title}
-                  </h3>
-                  <p className="mb-3 text-sm text-neutral-600">{m.body}</p>
+                <main className="flex-1 overflow-hidden space-y-2">
+                  {m.body_title && (
+                    <h3 className="text-xl font-bold text-[#911A00]">
+                      {m.body_title}
+                    </h3>
+                  )}
+                  {/* m.body_title이 있을 때: line-clamp-8 (8줄까지 표시)
+                      m.body_title이 없을 때: line-clamp-10 (10줄까지 표시) */}
+                  <p
+                    className={`text-base font-normal text-[#555555] ${
+                      m.body_title ? "line-clamp-8" : "line-clamp-10"
+                    }`}
+                  >
+                    {m.body}
+                  </p>
                 </main>
 
                 <footer className="flex items-center justify-between text-sm">
-                  <span className="text-neutral-500">
-                    {m.playwright} · {m.genres.join(" / ")}
-                  </span>
+                  <div></div>
+                  <div className="flex flex-col text-right gap-1">
+                    <span className="text-neutral-500">{m.playwright}</span>
+                    <span className="text-[#911A00]">『{m.play_title}』</span>
+                  </div>
                 </footer>
               </div>
             </article>

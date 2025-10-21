@@ -28,9 +28,9 @@ const DramaSearch = () => {
           height={112}
           className="mb-8"
         />
-        <h3 className="text-[32px] leading-none font-bold text-[#911A00] mb-5">
+        <div className="text-[32px] leading-none font-bold text-[#911A00] mb-5">
           오늘 찾아볼 희곡은 무엇인가요?
-        </h3>
+        </div>
         {/* 입력 + 버튼 */}
         <div className="w-full max-w-[720px] py-5 px-6 flex items-center justify-between gap-3 border-b-[1.4px] border-[#D02D01]">
           <input
@@ -66,7 +66,7 @@ const DramaSearch = () => {
           <div className="w-full h-[304px] bg-[#911A00]">
             <div className="w-full max-w-[1200px] h-full mx-auto flex items-center justify-between ">
               <div className="flex flex-col items-start justify-center text-white">
-                <h3 className="font-bold text-[32px]">지금 뜨는 메모</h3>
+                <h1 className="font-bold text-[32px]">지금 뜨는 메모</h1>
                 <p className="font-medium text-[20px]">
                   다른 유저가 남기고 간 메모를 발견해보세요
                 </p>

@@ -10,9 +10,9 @@ const InfiniteMarquee = () => {
 
   const MarqueeText = () => (
     <>
-      <h3 className="text-[32px] leading-none font-semibold text-[#DA8248] whitespace-nowrap">
+      <p className="text-[32px] leading-none font-semibold text-[#DA8248] whitespace-nowrap">
         {PHRASE}
-      </h3>
+      </p>
       <span className="inline-flex items-center justify-center w-9 h-9">
         <Image src="/icons/twinkle.png" alt="twinkle" width={19} height={24} />
       </span>

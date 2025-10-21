@@ -96,9 +96,9 @@ const HeroSlider = () => {
 
               {/* 오버레이 텍스트 */}
               <div className="absolute inset-x-0 top-[75%] -translate-y-1/2 flex flex-col items-center justify-center text-center text-white gap-3">
-                <h2 className="select-none font-[GreatVibes] text-[clamp(32px,6vw,100px)] leading-none">
+                <div className="select-none font-[GreatVibes] text-[clamp(32px,6vw,100px)] leading-none">
                   {s.title}
-                </h2>
+                </div>
                 {s.subtitle && (
                   <p className="select-none text-[clamp(14px,2vw,32px)] font-light leading-none text-[#868686]">
                     {s.subtitle}
