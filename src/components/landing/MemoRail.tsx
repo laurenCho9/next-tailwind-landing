@@ -26,21 +26,7 @@ const MemoRail = ({ items }: { items: TMemo[] }) => {
   );
 
   return (
-    <div className="relative">
-      {/* 삘간 컨테이너(타이틀란) */}
-      <div className="w-full h-[304px] bg-[#911A00]">
-        <div className="w-full max-w-[1200px] h-full mx-auto flex items-center justify-between ">
-          <div className="flex flex-col items-start justify-center text-white">
-            <h3 className="font-bold text-[32px]">지금 뜨는 메모</h3>
-            <p className="font-medium text-[20px]">
-              다른 유저가 남기고 간 메모를 발견해보세요
-            </p>
-          </div>
-          <div className="text-[80px] font-bold text-[#CC4B2F]">MEMO</div>
-        </div>
-      </div>
-      {/* 노란 컨테이너 */}
-      <div className="w-full h-[341px] mx-auto flex items-center justify-between bg-[#F8F1EA]"></div>
+    <>
       {/* Viewport */}
       <div
         ref={emblaRef}
@@ -81,7 +67,7 @@ const MemoRail = ({ items }: { items: TMemo[] }) => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default MemoRail;
