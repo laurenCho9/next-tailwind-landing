@@ -5,6 +5,8 @@ export default function Home() {
     <div className="w-full">
       <main className="relative flex flex-col items-center justify-center ">
         {/* 슬라이드 배너 */}
+        {/* Embla Carousel 선택: “배경 이미지 + 오버레이 텍스트” 구조일 때 적합
+        가볍고(App용 SSR 친화) 커스터마이즈가 쉬움 */}
         <section className="relative mx-auto w-full max-w-[1440px] aspect-[1440/795] overflow-hidden">
           <Image
             // Image를 배경처럼 사용하기 위해 fill 속성 사용
