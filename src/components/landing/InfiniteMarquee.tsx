@@ -23,7 +23,7 @@ const InfiniteMarquee = () => {
     <div className="marquee relative w-full h-[76px] bg-[#911A00] overflow-hidden">
       <div
         className="marquee-track h-full flex items-center gap-4 pr-4"
-        style={{ ["--marquee-duration" as any]: DURATION }}
+        style={{ "--marquee-duration": DURATION } as React.CSSProperties}
       >
         {/* 첫 번째 세트 */}
         <div className="flex items-center h-full gap-4 pr-4">
