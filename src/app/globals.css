@@ -40,23 +40,6 @@
   }
 }
 
-/* @keyframes memo-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  } /* 리스트를 2배로 복제했으니 -50%만 이동하면 무한 루프 */
-}
-.animate-memo-scroll {
-  animation-name: memo-scroll;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.animate-memo-scroll:hover {
-  animation-play-state: paused;
-} */
-
 body {
   background: var(--background);
   color: var(--foreground);
