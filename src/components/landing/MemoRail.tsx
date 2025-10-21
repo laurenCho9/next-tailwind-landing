@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef } from "react";
+import { useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import type { TMemo } from "@/types/memo";
@@ -14,10 +14,10 @@ const MemoRail = ({ items }: { items: TMemo[] }) => {
     })
   );
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(
+  const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
-      align: "start",
+      align: "center",
       slidesToScroll: 1,
       // 드래그 가능
       dragFree: true,
@@ -44,14 +44,18 @@ const MemoRail = ({ items }: { items: TMemo[] }) => {
       {/* Viewport */}
       <div
         ref={emblaRef}
-        className="absolute top-[230px] left-0 w-full h-full overflow-hidden"
+        className="absolute top-[230px] left-0 w-full h-full overflow-hidden px-5"
       >
         {/* Container */}
-        <div className="flex gap-8">
+        <div className="flex gap-5">
           {items.map((m) => (
+            // NOTE: flex-[0_0_388px]
+            // grow: 0 → 남는 공간을 늘려서 차지하지 않음
+            // shrink: 0 → 공간이 작아져도 줄어들지 않음
+            // basis: 388px → 기본 너비를 388px로 고정
             <article
               key={m.id}
-              className="flex-[0_0_480px] rounded-lg bg-white/98 shadow-sm p-6"
+              className="flex-[0_0_388px] h-[380px] bg-white shadow-[-4px_4px_4px_rgba(172,121,58,0.1)] p-8 last:mr-5"
             >
               <header className="mb-3 text-sm text-neutral-500">
                 <span className="font-medium text-neutral-700">
