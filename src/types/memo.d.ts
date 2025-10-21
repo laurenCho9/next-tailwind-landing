@@ -8,4 +8,5 @@ export type TMemo = {
   body: string;
   likes: number;
   comments: number;
+  body_title: string | null;
 };

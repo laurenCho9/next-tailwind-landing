@@ -49,10 +49,7 @@ const MemoRail = ({ items }: { items: TMemo[] }) => {
         {/* Container */}
         <div className="flex gap-5">
           {items.map((m) => (
-            // NOTE: flex-[0_0_388px]
-            // grow: 0 → 남는 공간을 늘려서 차지하지 않음
-            // shrink: 0 → 공간이 작아져도 줄어들지 않음
-            // basis: 388px → 기본 너비를 388px로 고정
+            // NOTE: flex-[0_0_388px]란? grow: 0 → 남는 공간을 늘려서 차지하지 않음, shrink: 0 → 공간이 작아져도 줄어들지 않음, basis: 388px → 기본 너비를 388px로 고정
             <article
               key={m.id}
               className="flex-[0_0_388px] h-[380px] bg-white shadow-[-4px_4px_4px_rgba(172,121,58,0.1)] p-8 last:mr-5"
