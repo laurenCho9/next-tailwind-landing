@@ -43,14 +43,14 @@ const OPTIONS: EmblaOptionsType = {
 const HeroSlider = () => {
   const autoplayRef = useRef(
     Autoplay({
-      delay: 3000,
-      stopOnInteraction: true,
+      delay: 2600,
+      stopOnInteraction: false,
       stopOnMouseEnter: true,
     })
   );
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [
     autoplayRef.current,
-    Fade(), // 크로스페이드 전환
+    // Fade(), // 크로스페이드 전환
   ]);
 
   const [selectedIndex, setSelectedIndex] = useState(0);
