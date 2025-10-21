@@ -4,17 +4,16 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-fade";
 import { useCallback, useEffect, useState, useRef } from "react";
 
-type Slide = {
+type TSlide = {
   src: string;
   title: string;
   subtitle: string;
   priority?: boolean;
 };
 
-const SLIDES: Slide[] = [
+const SLIDES: TSlide[] = [
   {
     src: "/images/main-top-banner1.jpg",
     title: "Playscripts, Playwrights - and Us",
@@ -48,10 +47,7 @@ const HeroSlider = () => {
       stopOnMouseEnter: true,
     })
   );
-  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [
-    autoplayRef.current,
-    // Fade(), // 크로스페이드 전환
-  ]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [autoplayRef.current]);
 
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -60,10 +56,6 @@ const HeroSlider = () => {
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
 
-  const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
-    [emblaApi]
-  );
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
     [emblaApi]
@@ -155,23 +147,6 @@ const HeroSlider = () => {
           />
         </button>
       </div>
-
-      {/* 인디케이터 */}
-      {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-        {SLIDES.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => scrollTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={[
-              "h-2.5 w-2.5 rounded-full transition-all",
-              i === selectedIndex
-                ? "bg-white w-6"
-                : "bg-white/50 hover:bg-white/70",
-            ].join(" ")}
-          />
-        ))}
-      </div> */}
     </section>
   );
 };
