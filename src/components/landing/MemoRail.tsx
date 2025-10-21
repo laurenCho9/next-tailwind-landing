@@ -4,6 +4,7 @@ import { useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import type { TMemo } from "@/types/memo";
+import { getRelativeDate } from "@/utils/date";
 
 const MemoRail = ({ items }: { items: TMemo[] }) => {
   const autoplayRef = useRef(
@@ -46,10 +47,7 @@ const MemoRail = ({ items }: { items: TMemo[] }) => {
                     {m.username}
                   </span>
                   <span className="text-sm font-semibold text-[#A0A0A0]">
-                    {new Date(m.created_at).toLocaleDateString("ko-KR", {
-                      month: "short",
-                      day: "numeric",
-                    })}
+                    {getRelativeDate(m.created_at)}
                   </span>
                 </header>
 
