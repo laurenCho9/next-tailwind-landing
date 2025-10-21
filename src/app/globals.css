@@ -40,7 +40,7 @@
   }
 }
 
-@keyframes memo-scroll {
+/* @keyframes memo-scroll {
   from {
     transform: translateX(0);
   }
@@ -53,6 +53,9 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+.animate-memo-scroll:hover {
+  animation-play-state: paused;
+} */
 
 body {
   background: var(--background);
