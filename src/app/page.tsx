@@ -1,4 +1,4 @@
-import AvailableProgramSlide from "@/components/landing/AvailableProgramSlide";
+import AvailableProgram from "@/components/landing/AvailableProgram";
 import DramaSearch from "@/components/landing/DramaSearch";
 import HeroSlider from "@/components/landing/HeroSlider";
 import InfiniteMarquee from "@/components/landing/InfiniteMarquee";
@@ -21,7 +21,7 @@ export default function Home() {
         <DramaSearch />
 
         {/* 하단 배너 */}
-        <AvailableProgramSlide />
+        <AvailableProgram />
       </main>
     </div>
   );
