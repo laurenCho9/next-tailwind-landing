@@ -31,12 +31,12 @@ const HeaderMenu = () => {
           >
             {menu.label}
             {hasSubMenu && (
-              <span className="flex items-center justify-center w-6 h-6">
+              <span className="flex items-center justify-center">
                 <Image
                   src="/icons/down-arrow.svg"
                   alt="down arrow"
-                  width={12}
-                  height={12}
+                  width={24}
+                  height={24}
                 />
               </span>
             )}

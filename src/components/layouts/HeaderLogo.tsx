@@ -10,6 +10,7 @@ const HeaderLogo = () => {
         width={160}
         height={36}
         priority={true}
+        className="w-[160px] h-[36px]"
       />
     </Link>
   );
