@@ -67,12 +67,12 @@ const AvailableProgramSlider = () => {
   return (
     <article
       aria-label="Available program slides"
-      className="absolute top-[230px] left-0 w-full aspect-[1200/644] mx-auto overflow-hidden"
+      className="absolute top-[230px] inset-x-0 w-full max-w-[1200px] aspect-[1200/644] mx-auto overflow-hidden"
     >
       {/* Viewport */}
       <div ref={emblaRef} className="h-full w-full overflow-hidden">
         {/* Container */}
-        <div className="flex h-full w-full max-w-[1200px] mx-auto">
+        <div className="flex h-full">
           {SLIDES.map((s, i) => (
             <div key={i} className="relative flex-[0_0_100%] h-full">
               {/* 배경 이미지 */}
