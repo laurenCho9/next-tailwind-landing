@@ -3115,6 +3115,7 @@ __metadata:
     "@types/node": ^20
     "@types/react": ^19
     "@types/react-dom": ^19
+    embla-carousel: 8.6.0
     embla-carousel-autoplay: ^8.6.0
     embla-carousel-fade: ^8.6.0
     embla-carousel-react: ^8.6.0
