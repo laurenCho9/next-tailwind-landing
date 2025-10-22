@@ -1,3 +1,4 @@
+import AvailableProgramSlide from "@/components/landing/AvailableProgramSlide";
 import DramaSearch from "@/components/landing/DramaSearch";
 import HeroSlider from "@/components/landing/HeroSlider";
 import InfiniteMarquee from "@/components/landing/InfiniteMarquee";
@@ -16,8 +17,11 @@ export default function Home() {
         텍스트+아이콘 블록을 두 번 이어붙이고, 트랙에 translateX 애니메이션을 걸면 매끈하게 무한 루프 */}
         <InfiniteMarquee />
 
-        {/* 희곡 검색 */}
+        {/* 희곡 검색 + 카드 레일 */}
         <DramaSearch />
+
+        {/* 하단 배너 */}
+        <AvailableProgramSlide />
       </main>
     </div>
   );

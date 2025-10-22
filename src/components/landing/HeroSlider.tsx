@@ -74,7 +74,7 @@ const HeroSlider = () => {
   const total = SLIDES.length;
 
   return (
-    <section
+    <article
       aria-label="Hero slides"
       className="relative mx-auto w-full max-w-[1440px] aspect-[1440/795] overflow-hidden"
     >
@@ -147,7 +147,7 @@ const HeroSlider = () => {
           />
         </button>
       </div>
-    </section>
+    </article>
   );
 };
 export default HeroSlider;

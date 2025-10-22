@@ -94,7 +94,7 @@ const MemoRail = ({ items }: { items: TMemo[] }) => {
       {/* Viewport */}
       <div
         ref={emblaRef}
-        className="absolute top-[230px] left-0 w-full h-full overflow-hidden px-5"
+        className="absolute top-[230px] left-0 w-full overflow-hidden px-5"
       >
         {/* Container */}
         <div className="flex gap-5">

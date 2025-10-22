@@ -4,6 +4,7 @@ import Image from "next/image";
 import MemoRail from "./MemoRail";
 import { useMemos } from "@/hooks/useMemos";
 import { useState } from "react";
+import SectionTitle from "../common/SectionTitle";
 
 const DramaSearch = () => {
   // q: 실제 쿼리 (검색 실행 시에만 변경)
@@ -19,8 +20,8 @@ const DramaSearch = () => {
   };
 
   return (
-    <section className="w-full h-[440px] bg-[#F8F1EA]">
-      <article className="mx-auto w-full max-w-[1440px] h-full flex flex-col items-center justify-center pt-[72px] pb-[100px]">
+    <section className="w-full">
+      <article className="mx-auto w-full max-w-[1440px] h-[440px] flex flex-col items-center justify-center pt-[72px] pb-[100px] bg-[#F8F1EA]">
         <Image
           src="/images/book.png"
           alt="book"
@@ -60,22 +61,12 @@ const DramaSearch = () => {
       </article>
 
       {/* 결과 레일 */}
-      <article className="mx-auto w-full max-w-[1440px] pb-[72px]">
+      <article className="mx-auto w-full max-w-[1440px] pb-[72px] bg-[#F8F1EA]">
         <div className="relative">
-          {/* 삘간 컨테이너(타이틀란) */}
-          <div className="w-full h-[304px] bg-[#911A00]">
-            <div className="w-full max-w-[1200px] h-full mx-auto flex items-center justify-between ">
-              <div className="flex flex-col items-start justify-center text-white">
-                <h1 className="font-bold text-[32px]">지금 뜨는 메모</h1>
-                <p className="font-medium text-[20px]">
-                  다른 유저가 남기고 간 메모를 발견해보세요
-                </p>
-              </div>
-              <div className="text-[80px] font-bold text-[#CC4B2F]">MEMO</div>
-            </div>
-          </div>
+          {/* 빨간 컨테이너(타이틀란) */}
+          <SectionTitle type="memo" />
           {/* 노란 컨테이너 */}
-          <div className="w-full h-[341px] mx-auto flex items-center justify-between bg-[#F8F1EA]"></div>
+          <div className="w-full h-[341px] mx-auto flex items-center justify-between"></div>
           {/* 카드 레일 */}
           {loading ? (
             <p className="text-black text-center absolute bottom-[230px] left-0 w-full">
